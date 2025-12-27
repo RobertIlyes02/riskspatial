@@ -1,0 +1,33 @@
+#' validate_exposure
+#'
+#' @param x Of Class Exposure
+#'
+#' @returns A True/False value
+#' @export
+#'
+#' @examples
+validate_exposure <- function(x) {
+  if (!inherits(x, "exposure")) {
+    rlang::abort("Object must be of class <exposure>.")
+  }
+
+  id_col    <- attr(x, "id_col")
+  value_col <- attr(x, "value_col")
+
+  if (!all(c(id_col, value_col) %in% names(x))) {
+    rlang::abort("Exposure metadata is inconsistent with columns.")
+  }
+
+  if (anyDuplicated(x[[id_col]])) {
+    rlang::abort("Duplicate exposure IDs detected.")
+  }
+  neg_count <- sum(x[[attr(x, "value_col")]] < 0, na.rm = TRUE)
+  if (neg_count > 0) {
+    rlang::warn(sprintf("%s negative exposure values detected.", neg_count))
+  }
+
+  invisible(TRUE)
+}
+
+document()
+
