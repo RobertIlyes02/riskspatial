@@ -1,5 +1,5 @@
 # riskspatial
-
+<img src="man/figures/hex-riskspatial.png" width="150" align="right" />
 ## 🚀 Overview
 An R-package for the basic P&C insurance analyses.
 

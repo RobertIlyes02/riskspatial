@@ -16,6 +16,14 @@ exposure <- function(x, id, value) {
     rlang::abort("Exposure geometry must be POINT.")
   }
 
+  if (!(rlang::as_string(id) %in% names(x))){
+    rlang::abort("Id column not in column names.")
+  }
+
+  if (!(rlang::as_string(value) %in% names(x))){
+    rlang::abort("Value column not in column names.")
+  }
+
   if (anyDuplicated(x[[rlang::as_string(id)]])) {
     rlang::abort("Exposure IDs must be unique.")
   }
@@ -24,6 +32,7 @@ exposure <- function(x, id, value) {
     rlang::abort("Exposure values must be non-negative.")
   }
 
+
   attr(x, "id_col")    <- rlang::as_string(id)
   attr(x, "value_col") <- rlang::as_string(value)
 
@@ -31,23 +40,6 @@ exposure <- function(x, id, value) {
   x
 }
 
-
-get_exposure_values <- function(x) {
-  value_col <- attr(x, "value_col")
-  if (is.null(value_col)) {
-    rlang::abort("This object has no value column defined.")
-  }
-  x[[value_col]]
-}
-
-
-get_id_values <- function(x){
-  id_col <- attr(x, "id_col")
-  if (is.null(id_col)){
-    rland::abort("This object has no id column define")
-  }
-  x[[id_col]]
-}
 
 CalculateEarnedExposure <- function(x, Start_Date, End_Date){
 
