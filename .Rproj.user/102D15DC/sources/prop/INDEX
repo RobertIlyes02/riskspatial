@@ -2,6 +2,7 @@
 ~%2FRiskSpat%2FV0.1%2FRiskspat01%2FDESCRIPTION="4DF0FC2C"
 ~%2FRiskSpat%2FV0.1%2FRiskspat01%2FNAMESPACE="305F88E5"
 ~%2FRiskSpat%2FV0.1%2FRiskspat01%2FR%2FAccess.R="5D922E49"
+~%2FRiskSpat%2FV0.1%2FRiskspat01%2FR%2FAggregate.R="F798AA5D"
 ~%2FRiskSpat%2FV0.1%2FRiskspat01%2FR%2FCreateTestDatasets.r="13D79BD3"
 ~%2FRiskSpat%2FV0.1%2FRiskspat01%2FR%2FExposures.R="BD4012C0"
 ~%2FRiskSpat%2FV0.1%2FRiskspat01%2FR%2FPrint.R="8727A3FB"
