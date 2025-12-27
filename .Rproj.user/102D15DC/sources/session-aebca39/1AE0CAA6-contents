@@ -8,3 +8,6 @@ Description: riskspace provides tools for translating spatial insurance exposure
 License: MIT
 Encoding: UTF-8
 LazyData: true
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
