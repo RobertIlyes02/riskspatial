@@ -1,3 +1,4 @@
+~%2FRiskSpat%2FV0.1%2FExampleDatasets.R="12068A89"
 ~%2FRiskSpat%2FV0.1%2FRiskspat01%2FDESCRIPTION="4DF0FC2C"
 ~%2FRiskSpat%2FV0.1%2FRiskspat01%2FNAMESPACE="305F88E5"
 ~%2FRiskSpat%2FV0.1%2FRiskspat01%2FR%2FCreateTestDatasets.r="13D79BD3"
@@ -8,3 +9,7 @@
 ~%2FRiskSpat%2FV0.1%2FRiskspat01%2FR%2Fdamage.R="F719E097"
 ~%2FRiskSpat%2FV0.1%2FRiskspat01%2FR%2Fhello.R="28869EC8"
 ~%2FRiskSpat%2FV0.1%2FRiskspat01%2Fman%2Fhello.Rd="A4DBF1C3"
+~%2FRiskSpat%2FV0.1%2FRiskspat01%2Ftests%2Ftestthat%2Fhelper-data.R="E5E4420D"
+~%2FRiskSpat%2FV0.1%2FRiskspat01%2Ftests%2Ftestthat%2Ftest-damage.R="ECC09FBF"
+~%2FRiskSpat%2FV0.1%2FRiskspat01%2Ftests%2Ftestthat%2Ftest-validate.R="AFF9294A"
+~%2FRiskSpat%2FV0.1%2FRiskspat01%2Ftests%2Ftestthat.R="DE6C67CF"

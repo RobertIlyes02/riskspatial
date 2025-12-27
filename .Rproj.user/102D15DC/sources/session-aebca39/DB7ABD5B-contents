@@ -11,12 +11,15 @@ validate_exposure <- function(x) {
     rlang::abort("Object must be of class <exposure>.")
   }
 
+  if (is.null(attr(x, "value_col"))) {
+    stop("Exposure metadata is missing 'id_col'.")
+  }
+  if (is.null(attr(x, "id_col"))) {
+    stop("Exposure metadata is missing 'value_col'.")
+  }
+
   id_col    <- attr(x, "id_col")
   value_col <- attr(x, "value_col")
-
-  if (!all(c(id_col, value_col) %in% names(x))) {
-    rlang::abort("Exposure metadata is inconsistent with columns.")
-  }
 
   if (anyDuplicated(x[[id_col]])) {
     rlang::abort("Duplicate exposure IDs detected.")
@@ -28,6 +31,4 @@ validate_exposure <- function(x) {
 
   invisible(TRUE)
 }
-
-document()
 
